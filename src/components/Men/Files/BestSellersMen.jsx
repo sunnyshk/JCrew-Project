@@ -27,7 +27,21 @@ export const MenBestSellers=(()=>{
           
           localStorage.setItem("datas",JSON.stringify(e))
       
-    })
+    });
+     const handlesort=((e)=>{
+         console.log(e.target.value);
+         const value=e.target.value
+         if(value=="Low"){
+        axios.get(`http://localhost:8080/best_sellers_men?_page=${next}&_limit=30&&_sort=price`).then((res)=>{
+            setFirst(res.data)
+        })
+         }
+          if(value=="High"){
+             axios.get(`http://localhost:8080/best_sellers_men?_page=${next}&_limit=30&&_sort=price&_order=desc`).then((res)=>{
+                 setFirst(res.data)
+             })
+         }
+     })
  
    
     return <div>
@@ -43,10 +57,10 @@ export const MenBestSellers=(()=>{
                 </select>
                 <select name="" id="">
                     <option value="">Features</option>
-                    <option  value="">Price:High to Low</option>
-                    <option value="">Price:Low to High</option>
-                    <option value="">Top Rated </option>
-                    <option value="">New Arrivals</option>
+                    <option  value="High">Price:High to Low</option>
+                    <option value="Low">Price:Low to High</option>
+                    <option value="Top">Top Rated </option>
+                    <option value="New">New Arrivals</option>
                 </select>
                <div className="second">   
                 <select  name="" id="">
