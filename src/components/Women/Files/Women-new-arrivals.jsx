@@ -26,7 +26,20 @@ export const Women1=(()=>{
          setSecond(res.data)
      })
     },[])
-    console.log(first)
+    const handlesort=((e)=>{
+         console.log(e.target.value);
+         const value=e.target.value
+         if(value=="Low"){
+        axios.get(`http://localhost:8080/mens_brands_we_love?_page=${next}&_limit=30&&_sort=price`).then((res)=>{
+            setFirst(res.data)
+        })
+         }
+          if(value=="High"){
+             axios.get(`http://localhost:8080/mens_brands_we_love?_page=${next}&_limit=30&&_sort=price&_order=desc`).then((res)=>{
+                 setFirst(res.data)
+             })
+         }
+     })
     const handledivclick=((e)=>{
           
           localStorage.setItem("datas",JSON.stringify(e))
