@@ -21,11 +21,7 @@ export const WomenBrandWeLove=(()=>{
         setFirst(res.data)
     })
     },[next])
-    // useEffect(()=>{
-    //  axios.get(`http://localhost:8080/new_arrivals?page2&_limit=3`).then((res)=>{
-    //      setSecond(res.data)
-    //  })
-    // },[])
+    
     console.log(first)
     const handledivclick=((e)=>{
           
