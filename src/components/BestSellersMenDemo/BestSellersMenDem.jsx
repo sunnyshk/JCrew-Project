@@ -17,7 +17,7 @@ export const MenBestSellers=(()=>{
     const[first,setFirst]=useState([]);
     
     useEffect(()=>{
-    axios.get(`http://localhost:8080/best_sellers_men?_page=${next}&_limit=24`).then((res)=>{
+    axios.get(`https://ancient-dawn-26797.herokuapp.com/best_sellers_men?_page=${next}&_limit=24`).then((res)=>{
         setFirst(res.data)
     })
     },[next])
