@@ -7,7 +7,7 @@ export const GirlsSweatShirt = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/girlsweatshirts?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/girlsweatshirts?_limit=12").then((d) =>
         d.json()
       );
       setsale(data);

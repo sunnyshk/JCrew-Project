@@ -7,7 +7,7 @@ export const MensBrandsWeLove = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/mens_brands_we_love?_limit=12").then(
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/mens_brands_we_love?_limit=12").then(
         (d) => d.json()
       );
       setbed(data);

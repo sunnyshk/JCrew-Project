@@ -7,7 +7,7 @@ export const NewArrivals = () => {
   
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/new_arrivals?_limit=12").then(
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/new_arrivals?_limit=12").then(
         (d) => d.json()
       );
       setbed(data);

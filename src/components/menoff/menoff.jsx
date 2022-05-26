@@ -7,7 +7,7 @@ export const Menoff = () => {
         
     useEffect(() => {
         async function getData(){
-          const data = await fetch("http://localhost:8060/men60%off?_limit=12").then((d)=>d.json());    
+          const data = await fetch("https://ancient-dawn-26797.herokuapp.com/men60%off?_limit=12").then((d)=>d.json());    
           setmad(data);   
         }    
         getData()  

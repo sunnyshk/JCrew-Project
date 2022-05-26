@@ -8,7 +8,7 @@ export const GirlsSwimandRashguards = () => {
   useEffect(() => {
     async function getData() {
       const data = await fetch(
-        "http://localhost:8060/girls_swimand_rashguards?_limit=12"
+        "https://ancient-dawn-26797.herokuapp.com/girls_swimand_rashguards?_limit=12"
       ).then((d) => d.json());
       setsale(data);
     }

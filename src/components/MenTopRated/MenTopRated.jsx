@@ -7,7 +7,7 @@ export const MenTopRated = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/men_top_rated?_limit=12").then(
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/men_top_rated?_limit=12").then(
         (d) => d.json()
       );
       setbed(data);
