@@ -7,7 +7,7 @@ export const ShopAll = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/shop_all?_limit=12").then(
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/shop_all?_limit=12").then(
         (d) => d.json()
       );
       setbed(data);

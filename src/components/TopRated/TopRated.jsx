@@ -7,7 +7,7 @@ export const TopRated = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/top_rated?_limit=12").then(
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/top_rated?_limit=12").then(
         (d) => d.json()
       );
       settop(data);

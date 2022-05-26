@@ -7,7 +7,7 @@ export const TeesPolos = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/tees&polos?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/tees&polos?_limit=12").then((d) =>
         d.json()
       );
       setsale(data);

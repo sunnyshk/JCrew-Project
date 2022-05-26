@@ -7,7 +7,7 @@ export const Swimwear = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/swimwear?_limit=12").then(
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/swimwear?_limit=12").then(
         (d) => d.json()
       );
       setbed(data);

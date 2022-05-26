@@ -7,7 +7,7 @@ export const Salemen = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/sale_men?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/sale_men?_limit=12").then((d) =>
         d.json()
       );
       setsalem(data);
