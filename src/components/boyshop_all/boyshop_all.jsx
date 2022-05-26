@@ -8,7 +8,7 @@ export const Boyshopall = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/boyshop_all?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/boyshop_all?_limit=12").then((d) =>
         d.json()
       );
       setshop(data);

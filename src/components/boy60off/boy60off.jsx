@@ -7,7 +7,7 @@ export const Boy60off = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/boy60off?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/boy60off?_limit=12").then((d) =>
         d.json()
       );
       setof(data);
