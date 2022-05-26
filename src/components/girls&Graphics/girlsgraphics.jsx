@@ -7,7 +7,7 @@ export const Girlsgraphicsshop = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/GIRLSgRAPHICsSHOP?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/GIRLSgRAPHICsSHOP?_limit=12").then((d) =>
         d.json()
       );
       setsle(data);

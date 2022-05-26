@@ -7,7 +7,7 @@ export const Forkids = () => {
 
   useEffect(() => {
     async function getData() {
-      const data = await fetch("http://localhost:8060/forkids?_limit=12").then((d) =>
+      const data = await fetch("https://ancient-dawn-26797.herokuapp.com/forkids?_limit=12").then((d) =>
         d.json()
       );
       setkids(data);
